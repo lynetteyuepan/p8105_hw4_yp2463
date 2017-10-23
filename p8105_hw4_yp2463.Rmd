@@ -1,0 +1,22 @@
+---
+title: "p8105_hw4_yp2463"
+author: "Lynette Pan"
+date: "October 23, 2017"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(haven)
+```
+
+```{r}
+pups_data = read_csv("FAS_pups copy.csv" , col_types = "ciiiii") %>% 
+  clean_names() %>% 
+  gather(key ="pd_landmarks", value = "postnatal_days", pd_ears:pd_walk)
+```
+
+
