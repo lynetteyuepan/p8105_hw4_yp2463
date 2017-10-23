@@ -19,4 +19,8 @@ pups_data = read_csv("FAS_pups copy.csv" , col_types = "ciiiii") %>%
   gather(key ="pd_landmarks", value = "postnatal_days", pd_ears:pd_walk)
 ```
 
+```{r}
+###  analysis
+lalalalal
+```
 
