@@ -11,16 +11,27 @@ library(tidyverse)
 library(janitor)
 library(readxl)
 library(haven)
+library(ggplot2)
+library(ggridges)
 ```
 
+# Read and Clean the Data
 ```{r}
 pups_data = read_csv("FAS_pups copy.csv" , col_types = "ciiiii") %>% 
   clean_names() %>% 
   gather(key ="pd_landmarks", value = "postnatal_days", pd_ears:pd_walk)
 ```
 
+# Plot the Distribution
 ```{r}
-###  analysis
-lalalalal
+# Plot the post-natal distribution for different landmarks
+pups_data %>%
+  ggplot(aes(x= postnatal_days, y = pd_landmarks)) +
+  geom_density_ridges(scale = .9) + 
+  labs(title = "Ridge Plot of Post-Natal Days", x = "Post-Natal Distribution", y = "Landmarks") +
+  theme(title = element_text(size = 20) ,text = element_text(size=15), axis.text.x = element_text(size = 15,), legend.text = element_text(size = 15), legend.title = element_text(size = 15))
 ```
 
+**Comments:**
+
+* From the plot above, we can see that the pd_ears group has the lowest post-natal days, which is around 2 to 6 days. The pivot and walk group have successively larger post-natal days. The pd_eyes group has the greatest post-natal days which is around 11 to 15 days. Each group has several peak of number of post-natal days.
