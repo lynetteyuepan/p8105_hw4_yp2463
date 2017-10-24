@@ -34,4 +34,4 @@ pups_data %>%
 
 **Comments:**
 
-* From the plot above, we can see that the pd_ears group has the lowest post-natal days, which is around 2 to 6 days. The pivot and walk group have successively larger post-natal days. The pd_eyes group has the greatest post-natal days which is around 11 to 15 days. Each group has several peak of number of post-natal days.
+* From the plot above, we can see that the pd_ears group has the lowest post-natal days, which is around 2 to 6 days. The pivot and walk group have successively larger post-natal days. The pd_eyes group has the greatest post-natal days which is around 11 to 15 days. Each group has several peak of number of post-natal days. Based upon the context of this problem, we can see that on average, it takes longer period of time to reach developmental lanmarks for eye development compared to other organ developments. Moreover, it tales shorter time for ear development to reach the developmental landmarks compared to other organ develpoment. 
