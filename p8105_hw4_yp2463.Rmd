@@ -15,14 +15,16 @@ library(ggplot2)
 library(ggridges)
 ```
 
-# Read and Clean the Data
+# Read and Clean the Data-Yue
 ```{r}
 pups_data = read_csv("FAS_pups copy.csv" , col_types = "ciiiii") %>% 
   clean_names() %>% 
   gather(key ="pd_landmarks", value = "postnatal_days", pd_ears:pd_walk)
+
+pups_data
 ```
 
-# Plot the Distribution
+# Plot the Distribution-Jingxuan
 ```{r}
 # Plot the post-natal distribution for different landmarks
 pups_data %>%
